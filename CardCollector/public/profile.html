@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>My Profile</title>
+</head>
+
+<body>
+  <div id="capture" style="padding: 10px; background:rgba(0, 0, 0, 0)">
+  <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
+    <header class="bmd-layout-header">
+      <div class="navbar navbar-dark bg-faded fixed-top justify-content-start">
+        <button class="navbar-toggler" type="button" data-toggle="drawer" data-target="#dw-s2">
+          <span class="sr-only">Toggle drawer</span>
+          <i class="material-icons">menu</i>
+        </button>
+        <a class="navbar-brand" href="/list.html">&nbsp;&nbsp;Edit Profile</a>
+        
+      </div>
+    </header>
+    
+    <div id="dw-s2" class="bmd-layout-drawer bg-faded">
+      <header>
+        <a class="navbar-brand">My Profile</a>
+      </header>
+      <ul class="list-group">
+        <!-- <a id="menuGoToProfilePage" class="list-group-item"><i class="material-icons">account_box</i>My Profile</a> -->
+        <a id="menuCollectionPage" class="list-group-item"><i class="material-icons">view_list</i>My Collections</a>
+        <a id="menuSignOut" class="list-group-item"><i class="material-icons">logout</i>Sign Out</a>
+      </ul>
+    </div>
+
+    <main class="bmd-layout-content">
+      <div id="profilePage" class="container page-container">
+        
+        <div class="card mx-auto" style="width: 18rem;">
+          <img id="profilePhoto" class="card-img-top" src="images/rose_logo.png">
+          <a id="submitPhoto" class="btn btn-primary">Update Profile Picture</a>
+          <input id="inputFile" type="file" hidden>
+          <div class="card-body">
+            <div class="form-group">
+              <label for="inputName" class="">Username</label>
+              <input type="email" class="form-control" id="inputName" placeholder="Your usernase">
+            </div>
+            <div class="form-group">
+              <label for="inputLocation" class="">Location</label>
+              <input type="email" class="form-control" id="inputLocation" placeholder="Your Location Base">
+            </div>
+            <div class="form-group">
+              <label for="inputPayment" class="">Payment</label>
+              <input type="email" class="form-control" id="inputPayment" placeholder="Your preferred payment method">
+            </div>
+            <div class="form-group">
+              <label for="inputBackout" class="">Backout</label>
+              <!-- <input type="email" class="form-control" id="inputBackout" placeholder="Do you support back outs?"> -->
+              <select class="custom-select" id="inputBackout">
+                <option selected>Do you support back outs?</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="inputHoldup" class="">Hold up</label>
+              <!-- <input type="email" class="form-control" id="inputHoldup" placeholder="Do you support hold ups?"> -->
+              <select class="custom-select" id="inputHoldup">
+                <option selected>Do you support hold ups?</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button id="wishlistFab" class="btn bmd-btn-fab" data-toggle="drawer" data-target="#wishlistDrawer" type="button">
+          <span class="sr-only">Toggle drawer</span>
+          <i class="material-icons">&nbsp;keyboard_double_arrow_up_icon</i>
+        </button>
+        <div class="mx-auto text-right" style="width: 18rem;">
+          <button type="button" id="submitName" class="btn">Done</button>
+        </div>
+        
+      </div>
+    </div>
+    </main>
+  </div>
+
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script src="scripts/html2canvas.js"></script>
+  <script src="scripts/html2canvas.min.js"></script>
+  <script>
+    $("body").bootstrapMaterialDesign();
+  </script>
+  <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-storage.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

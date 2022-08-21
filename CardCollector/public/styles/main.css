@@ -1,0 +1,225 @@
+body {
+    /* background: #DDDDDD; */
+    background-image:url('https://c4.wallpaperflare.com/wallpaper/63/375/698/sky-blue-blur-gradation-wallpaper-preview.jpg'); 
+    background-size: cover;
+}
+
+.navbar {
+    background-color: #10344b;
+    color: white;
+}
+
+.page-container {
+    margin-top: 75px;
+}
+
+#fab{
+    background:#10344b;
+    bottom:10px;
+    color: white;
+    position: fixed;
+    right:10px;
+    z-index: 999
+    /* always on top */
+}
+
+#fab:active{
+    transform: translateY(2px);
+    opacity:0.8;
+}
+
+.card{
+    margin: 10px 0; 
+    /* just top and bottom */
+}
+
+#listPage .card-title,
+#listPage .card-subtitle{
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+}
+
+.dropdown-menu-right{
+    left: -128px;
+}
+#roseLogo{
+    max-width: 350px;
+    margin: 20px auto;
+    display: block;
+}
+
+#rosefireButton{
+    display: block;
+    margin: 60px auto;
+    color: white;
+    background: #10344b;
+    font-size: 1.1em;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.bmd-layout-content{
+    height: 100vh;
+}
+
+.bmd-layout-drawer>header{
+    background-color: #10344b;
+    color:white;
+}
+
+.bmd-layout-drawer>ul{
+    background-color: #DDDDDD;
+}
+
+
+#menuEdit, 
+#menuDelete{
+    display: none;
+}
+
+.list-group-item{
+    cursor: pointer;
+}
+
+#submitName{
+    background-color: #10344b;
+    color: white;
+}
+
+#authorBox {
+    position:fixed;
+    bottom: 10px;
+    left: 20px;
+    z-index: 999;
+ }
+ 
+ #setPage #profilePhoto {
+    display: block;
+    max-width: 150px;
+    max-height: 200px;
+ }
+ 
+ div.scrollmenu {
+    height: 20vh;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  
+  div.scrollmenu img {
+    display: inline-block;
+    padding: 14px;
+    max-height:18vh
+  }
+
+  .card{
+    margin: 10px 0; 
+    /* just top and bottom */
+}
+
+.card-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown-menu-right{
+    left: -128px;
+}
+
+.img-fluid{
+    height: auto;
+}
+
+#detailPage .card{
+    margin: 0;
+}
+
+
+
+#columns {
+    column-count: 3;
+    column-gap: 5px;
+}
+
+@media (min-width: 992px) {
+    #columns {
+        column-count: 4;
+        column-gap: 10px;
+    }
+}
+
+.pin {
+    display: inline-block;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    margin: 0 2px 15px;
+    padding: 10px;
+    padding-bottom: 5px;
+    background: linear-gradient(45deg, #FFF, #EEE);
+    transition: all .2s ease;
+}
+
+.pin img {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+    margin-bottom: 3px;
+}
+
+.pin p {
+    font: 12px/18px Arial, sans-serif;
+    text-align: center;
+    color: #333;
+    margin: 0;
+    max-height: 18px;
+    overflow: hidden;
+}
+
+#detailPage #cardCaption {
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+#detailPage .card-body {
+    padding: 0;
+}
+
+#detailPage {
+    display: grid;
+    justify-content: center;
+}
+
+
+
+
+.bmd-layout-content{
+    height: 100vh;
+}
+
+
+.bmd-layout-drawer>ul{
+    background-color: #DDDDDD;
+}
+
+.list-group-item first-child{
+    margin-right: 0.75rem; 
+}
+
+#menuEdit, 
+#menuDelete{
+    display: none;
+}
+
+#wishlistFab{
+    background-color:rgba(34, 25, 25, 0);
+    color: #10344b;
+    bottom:10px;
+    position: fixed;
+    z-index: 999;
+    margin-left: 48%;;
+    box-shadow: none;
+}
+#menuCollectionPage{
+    color:black;
+}

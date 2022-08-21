@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Collection</title>
+</head>
+
+<body>
+  <div id="capture" style="padding: 10px; background:rgba(0, 0, 0, 0)">
+
+
+  <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
+    <header class="bmd-layout-header">
+      <div class="navbar navbar-dark bg-faded fixed-top justify-content-start">
+        <button class="navbar-toggler" type="button" data-toggle="drawer" data-target="#dw-s2">
+          <span class="sr-only">Toggle drawer</span>
+          <i class="material-icons">menu</i>
+        </button>
+        <a class="navbar-brand" href="/list.html">&nbsp;&nbsp;Collection</a>
+
+
+
+      </div>
+    </header>
+    <div id="dw-s2" class="bmd-layout-drawer bg-faded">
+      <header>
+        <a class="navbar-brand">Collection</a>
+      </header>
+      <ul class="list-group">
+        <a id="menuGoToProfilePage" class="list-group-item"><i class="material-icons">account_box</i>My Profile</a>
+        <!-- <a id="menuShowAllPhotos" class="list-group-item"><i class="material-icons">people_alt</i>Show all photos</a> -->
+        <a id="menuCollectionPage" class="list-group-item"><i class="material-icons">view_list</i>My Collections</a>
+        <a id="menuSignOut" class="list-group-item"><i class="material-icons">login</i>Sign Out</a>
+      </ul>
+    </div>
+
+
+
+    <main class="bmd-layout-content">
+      <div id="setPage" class="container page-container">
+        <div id="columns">
+
+        </div>
+
+
+
+        <div id="authorBox" class="card">
+          Owned by:
+          <img id="profilePhoto" src="/images/rose_logo.png" class="profile-image" alt="Profile photo">
+          <div id="inputLocation"></div>
+          <div id="inputPayment"></div>
+          <div id="inputBackout"></div>
+          <div id="inputHoldup"></div>
+          <div id="authorName" class="text-center">Unknown</div>
+        </div>
+
+      </div>
+
+
+    </main>
+
+
+    <!-- <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
+      <header class="bmd-layout-header">
+      </header>
+      <div id="wishlistDrawer" class="bmd-layout-drawer bg-faded">
+        <header>
+          <a class="navbar-brand">My wishlist</a>
+        </header>
+        <ul class="list-group">
+          <div id="wishList">
+            <a class="list-group-item">Link 1</a>
+            <a class="list-group-item">Link 2</a>
+            <a class="list-group-item">Link 3</a>
+          </div>
+
+        </ul>
+      </div>
+    </div> -->
+
+    <button id="wishlistFab" class="btn bmd-btn-fab" data-toggle="drawer" data-target="#wishlistDrawer" type="button">
+      <span class="sr-only">Toggle drawer</span>
+      <i class="material-icons">&nbsp;keyboard_double_arrow_up_icon</i>
+    </button>
+
+
+    <button id="fab" type="button" class="btn bmd-btn-fab" data-toggle="modal" data-target="#addPhotoDialog">
+      <i class="material-icons">add</i>
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addPhotoDialog" tabindex="-1" role="dialog" aria-labelledby="Add photo dialog"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add a Photo</h5>
+          </div>
+          <div class="modal-body">
+
+            <div class="form-group">
+              <label for="inputName">Card Name</label>
+              <input type="text" class="form-control" id="inputName" placeholder=" ">
+            </div>
+            <div class="form-group">
+              <button class="form-control btn" id="submitFile" placeholder=" ">Submit Photo</button>
+              <input type="file" id="inputFile" hidden>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+            <button id="submitAddCollection" type="button" class="btn btn-primary" data-dismiss="modal">ADD</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap-material-design.js"></script>
+    <script src="scripts/html2canvas.js"></script>
+    <script src="scripts/html2canvas.min.js"></script>
+    <script>
+      $("body").bootstrapMaterialDesign();
+    </script>
+    <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-storage.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

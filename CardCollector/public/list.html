@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>My Movie Quotes</title>
+</head>
+
+<body>
+  <div id="capture" style="padding: 10px; background:rgba(0, 0, 0, 0)">
+    <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
+      <header class="bmd-layout-header">
+        <div class="navbar navbar-dark bg-faded fixed-top justify-content-start">
+
+          <button class="navbar-toggler" type="button" data-toggle="drawer" data-target="#dw-s2">
+            <span class="sr-only">Toggle drawer</span>
+            <i class="material-icons">menu</i>
+          </button>
+          <a class="navbar-brand" href="#">&nbsp;&nbsp;My Movie Quotes</a>
+          <!-- <button id="copyLink" class="btn pull-xs-right">Copy Link</button>
+        <div class="alert alert-dark" role="alert">
+          This is a dark alert—check it out!
+        </div> -->
+        </div>
+      </header>
+      <div id="dw-s2" class="bmd-layout-drawer bg-faded">
+        <header>
+          <a class="navbar-brand">My Movie Quotes</a>
+        </header>
+        <ul class="list-group">
+          <a id="menuGoToProfilePage" class="list-group-item"><i class="material-icons">account_box</i>My Profile</a>
+          <!-- <a id="menuShowAllQuotes" class="list-group-item"><i class="material-icons">people_alt</i>Show all quotes</a>
+        <a id="menuShowMyQuotes" class="list-group-item"><i class="material-icons">person</i>Show my quotes</a> -->
+          <a id="menuSignOut" class="list-group-item"><i class="material-icons">logout</i>Sign Out</a>
+        </ul>
+      </div>
+      <main class="bmd-layout-content">
+        <div id="listPage" class="container page-container">
+          <!-- <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Series Name</h5>
+            <div class="scrollmenu">
+              <img class="img-fluid img-thumbnail" src="https://pbs.twimg.com/media/FaSdRA6XoAAmCPK?format=jpg&name=large">
+              <img class="img-fluid img-thumbnail" src="https://pbs.twimg.com/media/FapLTQlWYAEB9bb?format=jpg&name=large">
+            </div>
+          </div>
+        </div> -->
+          <div class="card mx-auto my-auto">
+            <div class="card no-gutters">
+              <div class="card-body" style="padding: 0px;">
+                <button class="btn">Collection List</button>
+              </div>
+            </div>
+            <ul class="list-group list-group-light list-group-small list-group-flush no-gutters"
+              style="padding: 0px; overflow: scroll;">
+              <div id="collectionListContainer">
+                <li class="list-group-item px-3 row">
+                  <div class="col-5">Collection name </div>
+                  <div class="col-3">&nbsp;</div>
+                  <button class=" btn col-1">
+                    &nbsp;
+                  </button>
+                  <button class=" btn col-1">
+                    <i class="material-icons">edit</i>
+                  </button>
+                </li>
+              </div>
+            </ul>
+            <div class="card-footer bg-light px-3  pull-xs-right">
+              <button class="btn" data-toggle="modal" data-target="#addQuoteDialog">Add New Collection</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- <nav class="navbar navbar-dark fixed-bottom row no-gutters">
+    <a class="navbar-brand col-3" href="/cart.html"> 
+        <i class="material-icons">view_module_icon</i>
+    </a>
+    <a class="navbar-brand col-3" href="/cart.html">
+      <i class="material-icons">list_alt</i>
+    </a>
+    <a id="profileIcon" class="navbar-brand col-3" href="/profile.html">
+        <i class="material-icons">person</i>
+    </a>
+</nav> -->
+
+
+
+  </div>
+  <button id="wishlistFab" class="btn bmd-btn-fab" data-toggle="drawer" data-target="#wishlistDrawer" type="button">
+    <span class="sr-only">Toggle drawer</span>
+    <i class="material-icons">&nbsp;keyboard_double_arrow_up_icon</i>
+  </button>
+
+  <!-- <button id="fab" type="button" class="btn bmd-btn-fab" data-toggle="modal" data-target="#addQuoteDialog">
+    <i class="material-icons">add</i>
+  </button> -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="addQuoteDialog" tabindex="-1" role="dialog" aria-labelledby="Add quote dialog"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"></h5>
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+          <!-- close button not really needed -->
+        </div>
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label for="inputCollection" class="bmd-label-floating">Collection Name</label>
+            <input type="text" class="form-control" id="inputCollection">
+          </div>
+          <!-- <div class="form-group">
+            <label for="inputMovie" class="bmd-label-floating">First Card picture</label>
+            <input type="file" class="form-control" id="inputMovie" hidden>
+            <span class="bmd-help">What movie is this quote from?</span>
+          </div> -->
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+          <button id="submitAddCollection" type="button" class="btn btn-primary" data-dismiss="modal">CREATE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script src="scripts/html2canvas.js"></script>
+  <script src="scripts/html2canvas.min.js"></script>
+  <script>
+    $("body").bootstrapMaterialDesign();
+  </script>
+  <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-storage.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
